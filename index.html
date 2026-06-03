@@ -3,15 +3,1132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anirban's Portfolio</title>
+  <title>Anirban Banerjee — Head of Content</title>
+  <meta name="description" content="Portfolio of Anirban Banerjee, Head of Content and Brand Storyteller with 20+ years of experience.">
+  <meta property="og:title" content="Anirban Banerjee — Head of Content">
+  <meta property="og:description" content="Twenty years of building content that moves people and content systems that get results.">
+  <meta property="og:image" content="preview.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Inter:wght@300;400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+
   <style>
-    body { font-family: sans-serif; max-width: 700px; margin: 80px auto; padding: 0 20px; color: #333; }
-    h1 { font-size: 2.5rem; }
-    p { font-size: 1.1rem; line-height: 1.6; color: #555; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --panel:   #3B2A22;
+      --accent:  #C4704F;
+      --cream:   #FDFAF5;
+      --white:   #FFFFFF;
+      --text:    #2A1F1A;
+      --muted:   #8C7B74;
+      --border:  #E8DDD6;
+      --script:  'Cormorant Garamond', Georgia, serif;
+      --display: 'Montserrat', sans-serif;
+      --sans:    'Inter', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: absolute;
+      top: 0; right: 0;
+      z-index: 100;
+      padding: 2rem 3rem;
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      text-transform: lowercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .nav-cta {
+      display: inline-block;
+      background: var(--panel);
+      color: var(--white) !important;
+      padding: 0.6rem 1.4rem;
+      font-size: 0.78rem !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.1em !important;
+      text-transform: uppercase !important;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .nav-cta:hover { background: var(--accent) !important; }
+
+    /* ── HERO ── */
+    #hero {
+      display: grid;
+      grid-template-columns: 38% 62%;
+      min-height: 100vh;
+    }
+
+    .hero-panel {
+      background: var(--panel);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-end;
+      padding: 3rem 0 3rem 2.5rem;
+      overflow: hidden;
+    }
+
+    .hero-vertical-text {
+      position: absolute;
+      top: 3rem;
+      left: 1.5rem;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transform: rotate(180deg);
+      font-family: var(--display);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+
+    .hero-panel-line {
+      position: absolute;
+      top: 7rem;
+      left: 2.5rem;
+      width: 1px;
+      height: 80px;
+      background: rgba(255,255,255,0.25);
+    }
+
+    .hero-photo {
+      width: calc(100% + 40px);
+      max-width: 520px;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      margin-left: -10px;
+    }
+
+    .hero-right {
+      background: var(--cream);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 8rem 5rem 4rem 5rem;
+    }
+
+    .hero-greeting {
+      font-family: var(--script);
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 0.2rem;
+    }
+
+    .hero-name {
+      font-family: var(--display);
+      font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+      font-weight: 800;
+      color: var(--panel);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      margin-bottom: 2rem;
+    }
+
+    .hero-text p {
+      font-size: 1rem;
+      color: var(--text);
+      max-width: 480px;
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+
+    .hero-text p:last-child { margin-bottom: 0; }
+
+    .hero-cta {
+      margin-top: 2.5rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--panel);
+      color: var(--white);
+      padding: 0.85rem 2rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .btn-primary:hover { background: var(--accent); }
+
+    .btn-secondary {
+      display: inline-block;
+      border: 1.5px solid var(--panel);
+      color: var(--panel);
+      padding: 0.85rem 2rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover { background: var(--panel); color: var(--white); }
+
+    /* ── HIGHLIGHTS ── */
+    #highlights {
+      background: var(--white);
+      padding: 100px 5rem;
+    }
+
+    .highlights-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .section-script-heading {
+      font-family: var(--script);
+      font-size: clamp(3rem, 5vw, 4.5rem);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--panel);
+      line-height: 1.1;
+    }
+
+    .highlights-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .highlights-list li {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 0.75rem;
+      align-items: start;
+    }
+
+    .hl-num {
+      font-family: var(--display);
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--accent);
+      padding-top: 0.3rem;
+      letter-spacing: 0.05em;
+    }
+
+    .hl-text {
+      font-size: 0.97rem;
+      color: var(--text);
+      line-height: 1.7;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .highlights-list li:last-child .hl-text { border-bottom: none; padding-bottom: 0; }
+
+    /* ── ABOUT ── */
+    #about {
+      background: var(--cream);
+      padding: 100px 5rem;
+    }
+
+    .about-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .about-text p {
+      font-size: 1rem;
+      color: var(--text);
+      margin-bottom: 1.3rem;
+      line-height: 1.85;
+    }
+
+    .about-text p:last-child { margin-bottom: 0; }
+
+    .skills-row {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill-tag {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 0.3rem 0.7rem;
+    }
+
+    /* ── CLIENTS ── */
+    #clients {
+      background: var(--panel);
+      padding: 100px 5rem;
+    }
+
+    .clients-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    #clients .section-script-heading {
+      color: var(--white);
+    }
+
+    .clients-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+    }
+
+    .clients-list li {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.7);
+      padding: 0.9rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+
+    .clients-list li:hover { color: var(--white); }
+
+    @media (max-width: 900px) {
+      #clients { padding: 70px 2rem; }
+      .clients-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .clients-list { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 500px) {
+      .clients-list { grid-template-columns: 1fr; }
+    }
+
+    /* ── CASE STUDIES ── */
+    #work {
+      background: var(--white);
+      padding: 100px 5rem;
+    }
+
+    .work-heading {
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+
+    .case-studies-list {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .cs-row {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .cs-row:last-child { border-bottom: 1px solid var(--border); }
+
+    .cs-visual {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 280px;
+      cursor: pointer;
+    }
+
+    .cs-visual-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 0.5rem;
+    }
+
+    .cs-visual-company {
+      font-family: var(--display);
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.2;
+    }
+
+    .cs-visual-year {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.45);
+      margin-top: 0.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    /* case study panel colors */
+    .cs-row:nth-child(1) .cs-visual { background: #3B2A22; }
+    .cs-row:nth-child(2) .cs-visual { background: #1E3A3A; }
+    .cs-row:nth-child(3) .cs-visual { background: #2D1F3D; }
+    .cs-row:nth-child(4) .cs-visual { background: #1F2D1E; }
+    .cs-row:nth-child(5) .cs-visual { background: #2A2020; }
+
+    .cs-content {
+      padding: 3rem;
+      border-left: 1px solid var(--border);
+    }
+
+    .cs-tag {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .cs-title {
+      font-family: var(--script);
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 600;
+      color: var(--panel);
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+    }
+
+    .cs-accordion { display: none; }
+    .cs-row.open .cs-accordion { display: block; }
+
+    .cs-section {
+      margin-bottom: 1.25rem;
+    }
+
+    .cs-section-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+
+    .cs-section p {
+      font-size: 0.92rem;
+      color: var(--text);
+      line-height: 1.75;
+      margin-bottom: 0.6rem;
+    }
+
+    .cs-section p:last-child { margin-bottom: 0; }
+
+    .outcome-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.25rem;
+    }
+
+    .pill {
+      font-size: 0.75rem;
+      font-weight: 500;
+      background: #F5EAE3;
+      color: var(--accent);
+      padding: 0.3rem 0.75rem;
+      border-radius: 2px;
+    }
+
+    .cs-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--panel);
+      padding: 0;
+      margin-top: 1rem;
+      transition: color 0.2s;
+    }
+
+    .cs-toggle-btn:hover { color: var(--accent); }
+
+    .cs-toggle-btn .arrow {
+      transition: transform 0.3s;
+      display: inline-block;
+    }
+
+    .cs-row.open .cs-toggle-btn .arrow { transform: rotate(90deg); }
+
+    /* ── WORK SAMPLES ── */
+    #samples {
+      background: var(--cream);
+      padding: 100px 5rem;
+    }
+
+    .samples-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .samples-heading {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 4rem;
+      align-items: start;
+      margin-bottom: 4rem;
+    }
+
+    .samples-intro {
+      font-size: 0.97rem;
+      color: var(--muted);
+      line-height: 1.8;
+      padding-top: 0.5rem;
+    }
+
+    .samples-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .sample-category h3 {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--panel);
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--panel);
+    }
+
+    .sample-category ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .sample-category a {
+      font-size: 0.88rem;
+      color: var(--text);
+      text-decoration: none;
+      line-height: 1.5;
+      transition: color 0.2s;
+      display: block;
+    }
+
+    .sample-category a:hover { color: var(--accent); }
+
+    /* ── TESTIMONIALS ── */
+    #testimonials {
+      background: var(--panel);
+      padding: 100px 5rem;
+    }
+
+    .testimonials-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .testimonials-heading {
+      font-family: var(--script);
+      font-size: clamp(3rem, 5vw, 4.5rem);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 4rem;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .testimonial {
+      border-top: 1px solid rgba(255,255,255,0.15);
+      padding-top: 2rem;
+    }
+
+    .testimonial-quote {
+      font-family: var(--script);
+      font-size: 1.15rem;
+      font-style: italic;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-author strong {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.03em;
+    }
+
+    .testimonial-author span {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.45);
+    }
+
+    .testimonials-more {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .testimonials-more a {
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .testimonials-more a:hover { color: var(--white); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--cream);
+      padding: 60px 5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-left {}
+
+    .footer-name {
+      font-family: var(--display);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--panel);
+      letter-spacing: -0.01em;
+    }
+
+    .footer-tagline {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 0.2rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .footer-links a {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--accent); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      #hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-panel { min-height: 55vw; }
+      .hero-right { padding: 4rem 2rem 3rem; }
+      nav { position: relative; padding: 1.5rem 2rem; background: var(--cream); justify-content: flex-end; }
+      #highlights, #about, #work, #samples, #testimonials { padding: 70px 2rem; }
+      .highlights-inner, .about-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .cs-row { grid-template-columns: 1fr; }
+      .cs-visual { min-height: 160px; }
+      .cs-content { border-left: none; border-top: 1px solid var(--border); }
+      .samples-heading { grid-template-columns: 1fr; gap: 1rem; }
+      .samples-grid { grid-template-columns: 1fr 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 1.5rem; text-align: center; padding: 3rem 2rem; }
+    }
+
+    @media (max-width: 600px) {
+      .samples-grid { grid-template-columns: 1fr; }
+      .hero-right { padding: 3rem 1.5rem 2.5rem; }
+      nav { padding: 1rem 1.5rem; gap: 1rem; }
+      .nav-links { gap: 1.2rem; }
+    }
   </style>
 </head>
 <body>
-  <h1>Hi, I'm Anirban 👋</h1>
-  <p>Welcome to my portfolio. More coming soon.</p>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-panel">
+      <span class="hero-vertical-text">Welcome</span>
+      <div class="hero-panel-line"></div>
+      <img class="hero-photo" src="Headshot.jpg" alt="Anirban Banerjee">
+    </div>
+    <div class="hero-right">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">about</a></li>
+          <li><a href="#work">work</a></li>
+          <li><a href="#samples">writing</a></li>
+          <li><a href="mailto:anirband.82@gmail.com" class="nav-cta">Contact</a></li>
+        </ul>
+      </nav>
+      <p class="hero-greeting">hello!</p>
+      <h1 class="hero-name">I'M ANIRBAN</h1>
+      <div class="hero-text">
+        <p>I'm a content and brand strategist helping companies stand out with storytelling that resonates.</p>
+        <p>I've led teams, shaped editorial strategy, and grown audience and pipeline for companies ranging from digital agencies to fast-moving B2B SaaS startups.</p>
+      </div>
+      <div class="hero-cta">
+        <a href="#work" class="btn-primary">See My Work</a>
+        <a href="https://www.linkedin.com/in/banerjeeanirban/" target="_blank" rel="noopener" class="btn-secondary">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section id="highlights">
+    <div class="highlights-inner">
+      <h2 class="section-script-heading">Highlights</h2>
+      <ul class="highlights-list">
+        <li>
+          <span class="hl-num">01</span>
+          <span class="hl-text">Planned and managed JustCall's webinar program for a year, averaging 330+ registrants per event, a 57% attendee rate, and 8% sales conversations per webinar.</span>
+        </li>
+        <li>
+          <span class="hl-num">02</span>
+          <span class="hl-text">Launched and ran The Business OS podcast from scratch, reaching 1,000+ organic downloads across 8 episodes with zero paid promotion.</span>
+        </li>
+        <li>
+          <span class="hl-num">03</span>
+          <span class="hl-text">Managed a 15-member digital marketing team at Web Spiders, working with over 50 clients from 4 continents.</span>
+        </li>
+        <li>
+          <span class="hl-num">04</span>
+          <span class="hl-text">Grew Wingman's blog traffic by 15% month-on-month for a full year through a mix of thought leadership, SEO, and a distinctive brand voice.</span>
+        </li>
+        <li>
+          <span class="hl-num">05</span>
+          <span class="hl-text">Built the social strategy for Humantic AI, growing their LinkedIn audience from 7K to 15K+ in under 6 months.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-inner">
+      <h2 class="section-script-heading">About<br>me</h2>
+      <div class="about-text">
+        <p>I started my career in a television newsroom, which is actually a great place to start for a content strategist. Because newsrooms are brutal. They teach you the value of clarity and a healthy respect for deadlines. After 5 years in news media, I switched to brand marketing and for the last 15 years, I have been helping brands sharpen their story and stand out in an increasingly crowded market.</p>
+        <p>I've led teams, built content functions, managed agencies, onboarded clients, pitched strategies, ghostwritten for CEOs, produced podcasts, and at various points done all of the above simultaneously with too few people and not enough time.</p>
+        <p>For the past five years I've been deep in B2B SaaS, helping companies reach audiences where they are with language they understand. With a customer-first approach to brand-building I've also been using AI to build workflow tools that solve real production problems.</p>
+        <div class="skills-row">
+          <span class="skill-tag">Content Strategy</span>
+          <span class="skill-tag">Editorial Leadership</span>
+          <span class="skill-tag">Brand Voice</span>
+          <span class="skill-tag">B2B SaaS</span>
+          <span class="skill-tag">Thought Leadership</span>
+          <span class="skill-tag">Podcast Production</span>
+          <span class="skill-tag">Webinar Programs</span>
+          <span class="skill-tag">SEO</span>
+          <span class="skill-tag">Social Strategy</span>
+          <span class="skill-tag">AI Workflows</span>
+          <span class="skill-tag">Ghostwriting</span>
+          <span class="skill-tag">Team Leadership</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO I'VE WORKED WITH -->
+  <section id="clients">
+    <div class="clients-inner">
+      <h2 class="section-script-heading">Who I've<br>worked with</h2>
+      <ul class="clients-list">
+        <li>JustCall</li>
+        <li>Humantic AI</li>
+        <li>Wingman</li>
+        <li>Clari</li>
+        <li>Singapore Polytechnic PACE</li>
+        <li>Heinz Singapore</li>
+        <li>DHL Singapore</li>
+        <li>Heinz Malaysia</li>
+        <li>Fisherman's Friend Singapore</li>
+        <li>Singapore National Parks Board</li>
+        <li>Singapore National Day Parade</li>
+        <li>KidSTOP</li>
+        <li>Bullring Birmingham</li>
+        <li>CUGE</li>
+        <li>Okome</li>
+        <li>Click Asia Summit</li>
+        <li>Bull Run Summit</li>
+        <li>SGInnovate</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES -->
+  <section id="work">
+    <div class="work-heading">
+      <h2 class="section-script-heading">Featured Work</h2>
+    </div>
+    <div class="case-studies-list">
+
+      <!-- CS 1 -->
+      <div class="cs-row" id="cs1">
+        <div class="cs-visual" onclick="toggleCS('cs1')">
+          <span class="cs-visual-label">JustCall / SaaSLabs</span>
+          <span class="cs-visual-company">The ABM<br>Research Engine</span>
+          <span class="cs-visual-year">2024 &ndash; 2026</span>
+        </div>
+        <div class="cs-content">
+          <p class="cs-tag">ABM Content &nbsp;&middot;&nbsp; AI Workflows</p>
+          <h3 class="cs-title">Building a scalable industry research system under tight timelines</h3>
+          <button class="cs-toggle-btn" onclick="toggleCS('cs1')">
+            Read the case study <span class="arrow">&#8594;</span>
+          </button>
+          <div class="cs-accordion">
+            <div class="cs-section">
+              <p class="cs-section-label">The Challenge</p>
+              <p>JustCall's ABM strategy required deep, industry-specific content targeting segments like dental clinics and real estate agencies. The expectation was one landing page a week across multiple simultaneous campaigns, with just me on point.</p>
+            </div>
+            <div class="cs-section">
+              <p class="cs-section-label">The Solution</p>
+              <p>Given an industry name, I researched the landscape, competitor marketing, customer pain points, and industry language, then produced a core research document used across sales, performance marketing, and content teams.</p>
+              <p>I built a Claude skill to generate a structured research document from an industry name, and a second to produce the landing page first draft. I reviewed and rewrote every output for brand voice, industry jargon, and insider references.</p>
+              <p>For stakeholder questions, I built a lightweight AI knowledge tool so anyone could query my research without coming to me directly.</p>
+            </div>
+            <div class="cs-section">
+              <p class="cs-section-label">The Outcome</p>
+              <div class="outcome-pills">
+                <span class="pill">Landing page per week cadence maintained</span>
+                <span class="pill">Research used across 3 teams simultaneously</span>
+                <span class="pill">Multiple campaigns shipped per month</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CS 2 -->
+      <div class="cs-row" id="cs2">
+        <div class="cs-visual" onclick="toggleCS('cs2')">
+          <span class="cs-visual-label">JustCall / SaaSLabs</span>
+          <span class="cs-visual-company">Podcast, Webinars<br>& the HubSpot Fix</span>
+          <span class="cs-visual-year">2024 &ndash; 2026</span>
+        </div>
+        <div class="cs-content">
+          <p class="cs-tag">Audio &amp; Visual &nbsp;&middot;&nbsp; CRM &nbsp;&middot;&nbsp; Data</p>
+          <h3 class="cs-title">Building an audio/visual program and solving a database segmentation problem</h3>
+          <button class="cs-toggle-btn" onclick="toggleCS('cs2')">
+            Read the case study <span class="arrow">&#8594;</span>
+          </button>
+          <div class="cs-accordion">
+            <div class="cs-section">
+              <p class="cs-section-label">The Challenge</p>
+              <p>I owned JustCall's podcast and webinar program with no in-house audio or video support. Promotion meant blasting the entire database, causing unsubscribes. The root problem was data quality: over 6,000 unique designations with no consistency, making targeted outreach impossible.</p>
+            </div>
+            <div class="cs-section">
+              <p class="cs-section-label">The Solution</p>
+              <p>I managed three external vendors and used Riverside for quick edits to avoid back-and-forth delays. I built a Claude skill that turned episode transcripts into clips, blog drafts, and social posts.</p>
+              <p>For the database, I used AI to bucket 6,000+ designations into around 100 standardised categories, created a new HubSpot field, and repeated the process for company industry.</p>
+            </div>
+            <div class="cs-section">
+              <p class="cs-section-label">The Outcome</p>
+              <div class="outcome-pills">
+                <span class="pill">330+ avg. webinar registrants</span>
+                <span class="pill">57% attendee rate</span>
+                <span class="pill">8% sales conversations per event</span>
+                <span class="pill">1,000+ podcast downloads</span>
+                <span class="pill">Email CTR improved</span>
+                <span class="pill">Unsubscribes dropped</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CS 3 -->
+      <div class="cs-row" id="cs3">
+        <div class="cs-visual" onclick="toggleCS('cs3')">
+          <span class="cs-visual-label">Wingman / Clari</span>
+          <span class="cs-visual-company">Scaling a<br>Brand Voice</span>
+          <span class="cs-visual-year">2021 &ndash; 2023</span>
+        </div>
+        <div class="cs-content">
+          <p class="cs-tag">Brand Voice &nbsp;&middot;&nbsp; Thought Leadership &nbsp;&middot;&nbsp; SEO</p>
+          <h3 class="cs-title">Turning a distinctive voice into a scalable content operation that survived an acquisition</h3>
+          <button class="cs-toggle-btn" onclick="toggleCS('cs3')">
+            Read the case study <span class="arrow">&#8594;</span>
+          </button>
+          <div class="cs-accordion">
+            <div class="cs-section">
+              <p class="cs-section-label">The Challenge</p>
+              <p>Wingman knew exactly what they wanted: a voice that was irreverent, human, and impossible to ignore in a market full of dry B2B content. The CEO's thesis was that a differentiated voice could outpunch bigger budgets. The problem was that only the content director could write in it reliably, making it impossible to scale.</p>
+            </div>
+            <div class="cs-section">
+              <p class="cs-section-label">The Solution</p>
+              <p>I internalized the voice, fleshed it out, and added to it, making it possible to produce content at volume without sacrificing what made it distinctive. I ran the full thought leadership pipeline: topic identification from customer interviews, research reports, and trending headlines, a weekly publishing cadence, lead magnets built for conversion, and ghostwriting for founders and executives in publications including Saleshacker (now GTMnow).</p>
+            </div>
+            <div class="cs-section">
+              <p class="cs-section-label">The Outcome</p>
+              <p>When Wingman was acquired by Clari, I was specifically asked to keep writing in the Wingman voice. The blog was ported to Clari, and I began producing content for Clari as well.</p>
+              <div class="outcome-pills" style="margin-top:0.75rem;">
+                <span class="pill">15% monthly blog growth for 12 months</span>
+                <span class="pill">1,200+ lead magnet downloads</span>
+                <span class="pill">Voice retained post-acquisition</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CS 4 -->
+      <div class="cs-row" id="cs4">
+        <div class="cs-visual" onclick="toggleCS('cs4')">
+          <span class="cs-visual-label">Humantic.ai</span>
+          <span class="cs-visual-company">Building a Content<br>Presence from Zero</span>
+          <span class="cs-visual-year">2023 &ndash; 2024</span>
+        </div>
+        <div class="cs-content">
+          <p class="cs-tag">Social Strategy &nbsp;&middot;&nbsp; Video &nbsp;&middot;&nbsp; Storytelling</p>
+          <h3 class="cs-title">Solo content function at an early-stage startup, anchored in customer voice</h3>
+          <button class="cs-toggle-btn" onclick="toggleCS('cs4')">
+            Read the case study <span class="arrow">&#8594;</span>
+          </button>
+          <div class="cs-accordion">
+            <div class="cs-section">
+              <p class="cs-section-label">The Challenge</p>
+              <p>Humantic.ai was an early-stage startup with fewer than 20 people and a two-person marketing team. I was brought in to build the content and social function from scratch, largely solo, with a LinkedIn presence of around 7,000 followers and no consistent publishing cadence.</p>
+            </div>
+            <div class="cs-section">
+              <p class="cs-section-label">The Solution</p>
+              <p>I anchored the strategy around customer voice. The CEO facilitated introductions to customers, and I ran conversational video interviews that became the backbone of our social content: clips, carousels, and blog posts built around real customer stories. The thesis was that trust, not reach, would drive growth at this stage.</p>
+              <p>I handled everything end to end: interviews, video editing, design elements, social content, and blog writing. For the product explainer video, I wrote the script and collaborated with a vendor on the creative and visual direction.</p>
+            </div>
+            <div class="cs-section">
+              <p class="cs-section-label">The Outcome</p>
+              <div class="outcome-pills">
+                <span class="pill">7K to 15K+ LinkedIn followers in 6 months</span>
+                <span class="pill">Full video production pipeline built solo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CS 5 -->
+      <div class="cs-row" id="cs5">
+        <div class="cs-visual" onclick="toggleCS('cs5')">
+          <span class="cs-visual-label">Web Spiders</span>
+          <span class="cs-visual-company">From Writer<br>to Running the Room</span>
+          <span class="cs-visual-year">2010 &ndash; 2021</span>
+        </div>
+        <div class="cs-content">
+          <p class="cs-tag">Agency Leadership &nbsp;&middot;&nbsp; Multi-market &nbsp;&middot;&nbsp; Client Strategy</p>
+          <h3 class="cs-title">11 years growing from individual contributor to leading a cross-functional agency team</h3>
+          <button class="cs-toggle-btn" onclick="toggleCS('cs5')">
+            Read the case study <span class="arrow">&#8594;</span>
+          </button>
+          <div class="cs-accordion">
+            <div class="cs-section">
+              <p class="cs-section-label">The Challenge</p>
+              <p>Web Spiders was a small digital agency serving clients across Singapore, Malaysia, India, the UK, and the US. When I joined as a Senior Content Writer, it was primarily an SEO content shop. Over the next decade, the agency pivoted almost entirely to social media and then to full-service digital marketing, and the demands on me grew with it.</p>
+            </div>
+            <div class="cs-section">
+              <p class="cs-section-label">The Solution</p>
+              <p>I stepped into a project lead role early after an internal crisis and never really stepped back. By my final four years, I was involved in every stage of the client lifecycle: pitching, onboarding, structuring deliverables, and staying personally involved until trust was established. Every team in the agency eventually reported to me.</p>
+              <p>The clearest example was Singapore Polytechnic PACE. They came in as a basic social media client and over four years grew into a full 360-degree engagement covering social, SEO, performance marketing, and content. Contract value grew roughly 30% each year. I had four full-time team members and a Singapore-based resource reporting to me, and we ran video shoots remotely from India.</p>
+            </div>
+            <div class="cs-section">
+              <p class="cs-section-label">The Outcome</p>
+              <div class="outcome-pills">
+                <span class="pill">50+ clients managed simultaneously</span>
+                <span class="pill">11 years of consistent delivery</span>
+                <span class="pill">30% YoY contract growth at SP PACE</span>
+                <span class="pill">Team of 15 across all disciplines</span>
+                <span class="pill">DHL, Motorola, Singapore Polytechnic</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WORK SAMPLES -->
+  <section id="samples">
+    <div class="samples-inner">
+      <div class="samples-heading">
+        <h2 class="section-script-heading">Writing<br>&amp; More</h2>
+        <p class="samples-intro">Selected pieces from across the case studies above. These are here as supporting evidence: to show the range of formats I work across and the quality of what gets shipped.</p>
+      </div>
+      <div class="samples-grid">
+        <div class="sample-category">
+          <h3>Thought Leadership</h3>
+          <ul>
+            <li><a href="https://gtmnow.com/sales-myths/" target="_blank" rel="noopener">9 Harmful Sales Myths (GTMnow)</a></li>
+            <li><a href="https://www.linkedin.com/pulse/why-only-ceo-can-own-iot-richard-foster-fletcher/" target="_blank" rel="noopener">Why Only the CEO Can Own IoT</a></li>
+            <li><a href="https://www.linkedin.com/pulse/would-you-let-chatbox-choose-your-next-dateand-9-cool-richard/" target="_blank" rel="noopener">Would You Let a Chatbot Choose Your Next Date?</a></li>
+            <li><a href="https://www.linkedin.com/pulse/data-capital-future-bits-atoms-richard-foster-fletcher/" target="_blank" rel="noopener">Data Capital: The Future of Bits and Atoms</a></li>
+            <li><a href="https://web.archive.org/web/20240602100714/https://runrevenue.pro/wp-content/uploads/2023/08/MRKT-0966-Superside-Precision-Playbook-6-Fundamental-Sales-Strategies-.pdf" target="_blank" rel="noopener">6 Fundamental Sales Strategies (Playbook)</a></li>
+          </ul>
+        </div>
+        <div class="sample-category">
+          <h3>Brand Voice &amp; Editorial</h3>
+          <ul>
+            <li><a href="https://www.clari.com/resources/glossary/sales-objections/" target="_blank" rel="noopener">Sales Glossary (Clari)</a></li>
+            <li><a href="https://www.clari.com/blog/clari-labs-battlecards/" target="_blank" rel="noopener">Clari Labs Battlecards</a></li>
+            <li><a href="https://www.clari.com/blog/sales-methodology-vs-sales-process/" target="_blank" rel="noopener">Sales Methodology vs. Sales Process</a></li>
+            <li><a href="https://humantic.ai/blog/6-leadership-lessons-from-michael-norton-that-go-hard/" target="_blank" rel="noopener">Leadership Lessons from Michael Norton</a></li>
+            <li><a href="https://justcall.io/blog/permit-poachers.html" target="_blank" rel="noopener">Permit Poachers (ABM, Healthcare)</a></li>
+            <li><a href="https://justcall.io/blog/why-dental-ivrs-fail.html" target="_blank" rel="noopener">Why Dental IVRs Fail (ABM)</a></li>
+          </ul>
+        </div>
+        <div class="sample-category">
+          <h3>Video &amp; Podcast</h3>
+          <ul>
+            <li><a href="https://justcall.io/thebusinessos/" target="_blank" rel="noopener">The Business OS Podcast</a></li>
+            <li><a href="https://www.youtube.com/watch?v=CPSKvaLAjBo&list=PLCM0m8wTFxfkEX2BabKBoJtQ9qHFdV3Ys" target="_blank" rel="noopener">Podcast Full Playlist (YouTube)</a></li>
+            <li><a href="https://www.youtube.com/watch?v=39m2qUAKsdk" target="_blank" rel="noopener">Humantic AI Product Explainer</a></li>
+            <li><a href="https://www.youtube.com/watch?v=xsQaantW1Hs" target="_blank" rel="noopener">JustCall Industry Explainer</a></li>
+            <li><a href="https://justcall.io/webinar/cold-calling-battle-royale/" target="_blank" rel="noopener">Webinar: Cold Calling Battle Royale</a></li>
+            <li><a href="https://justcall.io/webinar/perfect-followup-strategies-with-james-buckley/" target="_blank" rel="noopener">Webinar: Perfect Follow-Up</a></li>
+          </ul>
+        </div>
+        <div class="sample-category">
+          <h3>Content Repurposing</h3>
+          <ul>
+            <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7180949615884582916" target="_blank" rel="noopener">Social Carousel</a></li>
+            <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7183147638756716545" target="_blank" rel="noopener">Short-form Video</a></li>
+            <li><a href="https://humantic.ai/blog/6-leadership-lessons-from-michael-norton-that-go-hard/" target="_blank" rel="noopener">Blog Post</a></li>
+            <li><a href="https://www.youtube.com/watch?v=ZBxmePSRTgg" target="_blank" rel="noopener">YouTube Short</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="testimonials-inner">
+      <h2 class="testimonials-heading">What people say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <p class="testimonial-quote">Anirban is one of the most creative writers I've ever worked with. He's an idea machine, dedicated to his craft, and a fantastic teammate. If you want truly outside of the box thinking, Anirban is your guy.</p>
+          <div class="testimonial-author">
+            <strong>Devin Reed</strong>
+            <span>Head of Content, Clari</span>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-quote">Anirban joined Wingman's content team when we were scaling it from a 1-woman army to a brand machine. He brought so much energy, creativity and humor to work that he bowled all of us over.</p>
+          <div class="testimonial-author">
+            <strong>Shruti Kapoor</strong>
+            <span>Head of International Business, Clari (formerly CEO, Wingman)</span>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-quote">He brings creativity, originality and emotion to any writing project. He can write for B2B, B2C and everything in between with ease and &eacute;lan. He's highly skilled as a content strategist and brings his analytical skills to the table.</p>
+          <div class="testimonial-author">
+            <strong>Kushal Saini Kakkar</strong>
+            <span>Director - Marketing (Content), Clari</span>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p class="testimonial-quote">Anirban has a rare combination of creativity and attention to detail. He is a quick study and this is a big help in the projects we have completed together.</p>
+          <div class="testimonial-author">
+            <strong>Richard Foster-Fletcher</strong>
+            <span>Executive Chair, MKAI.org</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonials-more">
+        <a href="https://www.linkedin.com/in/banerjeeanirban/details/recommendations/" target="_blank" rel="noopener">More recommendations on LinkedIn &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-left">
+      <p class="footer-name">Anirban Banerjee</p>
+      <p class="footer-tagline">Head of Content &nbsp;&middot;&nbsp; Brand Storytelling</p>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:anirband.82@gmail.com">anirband.82@gmail.com</a>
+      <a href="https://www.linkedin.com/in/banerjeeanirban/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#work">Case Studies</a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleCS(id) {
+      const row = document.getElementById(id);
+      row.classList.toggle('open');
+    }
+  </script>
+
 </body>
 </html>
